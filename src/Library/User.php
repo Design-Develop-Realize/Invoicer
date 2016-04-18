@@ -71,6 +71,7 @@ class User extends Password
     public function logout()
     {
         session_destroy();
+        $_SESSION['loggedin'] = false;
     }
 
     /**

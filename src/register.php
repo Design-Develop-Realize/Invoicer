@@ -26,7 +26,7 @@ if(array_key_exists('register', $_POST))
         <?php echo $config->getName(); ?>
     </title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="Assets/css/style.css">
 </head>
 <body>
 <section class="container">

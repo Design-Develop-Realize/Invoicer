@@ -9,6 +9,11 @@ $user   = new Library\User();
 
 session_start();
 
+if(isset($_GET['do']) && $_GET['do'] == 'logout')
+{
+    $user->logout();
+}
+
 //Quick check to see if the user is already logged in
 if($user->is_authenticated())
 {
@@ -33,7 +38,7 @@ if(array_key_exists('login', $_POST)) {
             <?php echo $config->getName(); ?>
         </title>
 
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="Assets/css/style.css">
     </head>
     <body>
     <section class="container">

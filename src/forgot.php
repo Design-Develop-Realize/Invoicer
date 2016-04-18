@@ -54,52 +54,10 @@ if(array_key_exists('update', $_POST))
 } elseif(isset($_GET['key']))
 {
     //a key has been passed for a reset
-        $return = $user->check_key($_GET['key']);
-        $uid = $return['userid'];
-?>
-<html>
-    <head>
-        <title>
-            <?php echo $config->getName(); ?>
-        </title>
+    $return = $user->check_key($_GET['key']);
+    $uid = $return['userid'];
 
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <body>
-        <section class="container">
-            <div class="login">
-                <h1><?php echo $config->getName(); ?> Set new password</h1>
-                <form method="post">
-                    <p><input type="password" name="password" value="" placeholder="Password"></p>
-                    <p><input type="password" name="password_check" value="" placeholder="Password Check"></p>
-                    <p><input type="hidden" name="uid" value="<?php $uid; ?>"></p>
-                    <p class="submit"><input type="submit" name="update" value="Reset"></p>
-                </form>
-            </div>
-        </section>
-        </body>
-        </html>
-<?php
+    include_once('Assets/HTML/password_set.html');
 } else {
-?>
-<html>
-<head>
-    <title>
-        <?php echo $config->getName(); ?>
-    </title>
-
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-<section class="container">
-    <div class="login">
-        <h1><?php echo $config->getName(); ?> Forgotten Password</h1>
-        <form method="post">
-            <p><input type="text" name="user" value="" placeholder="Username or Email"></p>
-            <p class="submit"><input type="submit" name="reset" value="Reset"></p>
-        </form>
-    </div>
-</section>
-</body>
-</html>
-<?php } ?>
+    include_once('Assets/HTML/forgot_password.html');
+}
