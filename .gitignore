@@ -1,0 +1,7 @@
+.idea
+vendor/
+composer.lock
+bin/
+spec/
+phpspec.yml
+src/Config/site.ini
