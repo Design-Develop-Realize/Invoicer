@@ -30,7 +30,7 @@ if(!$user->is_authenticated())
 } else {
     if($user->is_client())
     {
-
+        include_once('Assets/HTML/client_main.html');
     } elseif($user->is_staff()) {
         echo("                Welcome back staff member!");
     }
