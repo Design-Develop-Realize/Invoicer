@@ -32,7 +32,7 @@ if(!$user->is_authenticated())
     {
         include_once('Assets/HTML/client_main.html');
     } elseif($user->is_staff()) {
-        echo("                Welcome back staff member!");
+        include_once('Assets/HTML/staff_main.html');
     }
 }
 ?>
