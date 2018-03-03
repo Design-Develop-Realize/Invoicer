@@ -23,7 +23,7 @@ $pdf->add_company( "http://pairofmarks.com/Assets/Images/ddrlogoconc1.png",
     "Horsforth, LS18 5AA\n".
     "07725 918193\n");
 $pdf->fact_dev( "Estimate", "TEMP" );
-//$pdf->temporaire( "Temporary Estimate" );
+$pdf->temporaire( "Temporary Estimate" );
 $pdf->addDate( "03/12/2003");
 $pdf->addClient("OSM");
 $pdf->addPageNumber("1");
