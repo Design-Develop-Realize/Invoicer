@@ -17,7 +17,7 @@ use Invoice\Library;
 
 $pdf = new Library\Invoice( 'P', 'mm', 'A4' );
 $pdf->AddPage();
-$pdf->add_company( "https://designdeveloprealize.com/img/ddrlogoconc1.png",
+$pdf->add_company( "http://pairofmarks.com/Assets/Images/ddrlogoconc1.png",
     "Design Develop Realize",
     "6 Long Row\n" .
     "Horsforth, LS18 5AA\n".
